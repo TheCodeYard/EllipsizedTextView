@@ -6,6 +6,8 @@ A simple TextView that supports custom `ellipsis` as well as `ellipsisColor`. Dr
 - Respects `Spanned` texts.
 - Does not draw the text more times than a regular `TextView` would.
 
+<img src="https://github.com/TheCodeYard/EllipsizedTextView/blob/master/img/screenshot.png" height="600">
+
 ## Usage
 ```
     <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
