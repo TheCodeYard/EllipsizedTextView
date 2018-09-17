@@ -1,21 +1,48 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'ellipsizedtextview'
+
+    publishedGroupId = 'com.thecodeyard.android'
+    libraryName = 'EllipsizedTextView'
+    artifact = 'ellipsizedtextview'
+
+    libraryDescription = 'A simple TextView with a simple task: support custom ellipsis.'
+
+    siteUrl = 'https://github.com/TheCodeYard/EllipsizedTextView'
+    gitUrl = 'https://github.com/TheCodeYard/EllipsizedTextView.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'gsavvid'
+    developerName = 'George Savvidis'
+    developerEmail = 'george.savvidis@thecodeyard.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
     }
 }
 
@@ -23,6 +50,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.70"
 }
-repositories {
-    mavenCentral()
-}
+
+apply from: rootProject.file('gradle/maven-push.gradle')
