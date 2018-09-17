@@ -5,35 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ellipsize start"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLines="2"
         android:ellipsize="start"
+        android:maxLines="2"
         android:text="@string/long_text"
         app:ellipsis="@string/ellipsis_start"
-        app:ellipsisColor="@color/colorAccent"
-        android:layout_marginBottom="16dp"/>
+        app:ellipsisColor="@color/colorAccent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#4c4c4c" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ellipsize middle"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="2"
+        android:layout_marginBottom="16dp"
         android:ellipsize="middle"
+        android:maxLines="2"
         android:text="@string/long_text"
         app:ellipsis="@string/ellipsis_middle"
-        app:ellipsisColor="@color/colorAccent"
-        android:layout_marginBottom="16dp"/>
+        app:ellipsisColor="@color/colorAccent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#4c4c4c" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ellipsize end"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="2"
+        android:layout_marginBottom="16dp"
         android:ellipsize="end"
+        android:maxLines="2"
         android:text="@string/long_text"
         app:ellipsis="@string/ellipsis_end"
-        app:ellipsisColor="@color/colorAccent"
-        android:layout_marginBottom="16dp"/>
+        app:ellipsisColor="@color/colorAccent" />
 </LinearLayout>
