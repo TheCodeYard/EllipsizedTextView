@@ -1,7 +1,12 @@
 # EllipsizedTextView
 
+## Download
+```
+dependencies {
+  implementation 'com.thecodeyard.android:ellipsizedtextview:1.0.0'
+}
+```
 ## License
-
 Copyright 2018 The Code Yard
 
 Licensed under the Apache License, Version 2.0 (the "License");
