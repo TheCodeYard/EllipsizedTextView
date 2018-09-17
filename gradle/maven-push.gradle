@@ -64,6 +64,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = bintrayRepo
+        userOrg = properties.getProperty("bintray.org")
         name = bintrayName
         desc = libraryDescription
         websiteUrl = siteUrl
@@ -75,6 +76,10 @@ bintray {
         publicDownloadNumbers = true
         version {
             desc = libraryDescription
+            gpg {
+                sign = true
+                passphrase = properties.getProperty("bintray.gpg.passphrase")
+            }
         }
     }
 }
