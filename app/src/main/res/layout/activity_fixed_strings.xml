@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".fixedStrings.FixedStringsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Ellipsize start"
+        android:text="@string/header_ellipsized_start"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Ellipsize middle"
+        android:text="@string/header_ellipsized_middle"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Ellipsize end"
+        android:text="@string/header_ellipsized_end"
         android:textSize="14sp"
         android:textStyle="bold" />
 

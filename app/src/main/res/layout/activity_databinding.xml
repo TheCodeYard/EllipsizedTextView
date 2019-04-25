@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.thecodeyard.ellipsizedtextview.databinding.DatabindingActivity" />
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Ellipsize start"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="start"
-        android:maxLines="2"
-        android:text="@string/long_text"
-        app:ellipsis="@string/ellipsis_start"
-        app:ellipsisColor="@color/colorAccent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/header_ellipsized_start"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:background="#4c4c4c" />
+        <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:maxLines="2"
+            android:text="@{viewModel.longText}"
+            app:ellipsis="@{viewModel.ellipsisStart}"
+            app:ellipsisColor="@color/colorAccent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Ellipsize middle"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#4c4c4c" />
 
-    <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ellipsize="middle"
-        android:maxLines="2"
-        android:text="@string/long_text"
-        app:ellipsis="@string/ellipsis_middle"
-        app:ellipsisColor="@color/colorAccent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/header_ellipsized_middle"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:background="#4c4c4c" />
+        <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="middle"
+            android:maxLines="2"
+            android:text="@{viewModel.longText}"
+            app:ellipsis="@{viewModel.ellipsisMiddle}"
+            app:ellipsisColor="@color/colorAccent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Ellipsize end"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#4c4c4c" />
 
-    <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:text="@string/long_text"
-        app:ellipsis="@string/ellipsis_end"
-        app:ellipsisColor="@color/colorAccent" />
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/header_ellipsized_end"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.thecodeyard.ellipsizedtextview.EllipsizedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{viewModel.longText}"
+            app:ellipsis="@{viewModel.ellipsisEnd}"
+            app:ellipsisColor="@color/colorAccent" />
+    </LinearLayout>
+</layout>
