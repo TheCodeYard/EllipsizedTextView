@@ -25,4 +25,6 @@ dependencies {
     api project(':ellipsizedtextview')
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.70"
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
 }
